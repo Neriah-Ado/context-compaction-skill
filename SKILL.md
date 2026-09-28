@@ -2,7 +2,7 @@
 name: context-compaction
 description: "Auto-trigger when a coding-agent session grows long: context usage nears the model window (default 70%), tool outputs pile up, the user asks to 压缩上下文/压缩会话/保存进度, or a context-limit warning appears. Works with any model and any coding agent (ZCode, Claude Code, Codex, Step Code, etc.). Produces a structured context snapshot file plus a mechanical transcript compaction so work continues in a fresh session without losing goals, decisions, or file state."
 when_to_use: "会话上下文接近当前模型窗口上限、工具输出大量堆积、用户要求压缩上下文/保存进度/交接新会话、出现上下文超限告警，或长任务进入无人值守阶段前需要交接现场时"
-license: MIT
+license: AGPL-3.0-only
 ---
 
 # 通用 Agent 上下文自动压缩（Context Compaction）

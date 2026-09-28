@@ -37,4 +37,6 @@ python scripts/compress_session.py tests/fixture.txt --out /tmp/out2.md
 
 ## License
 
-MIT
+[AGPL-3.0-only](./LICENSE)
+
+历史 MIT 文本与版权声明保留在 [LICENSE-MIT](./LICENSE-MIT)。
