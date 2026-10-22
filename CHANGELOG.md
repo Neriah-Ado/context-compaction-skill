@@ -1,10 +1,10 @@
 # Changelog
 
-本文件记录 context-compaction 技能的所有版本变更。格式参考 Keep a Changelog。
+本文件记录 context-compaction 技能的所有版本变更。格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [SemVer](https://semver.org/lang/zh-CN/)。
 
 ## [1.0.1] - 2026-09-27
 
-### Changed
+### 变更
 
 - **通用化改造**：从「ZCode 客户端 + StepFun 模型专向」改为适用于所有编码 Agent（ZCode / Claude Code / Codex / Step Code 等）与任意模型
   - 技能名 `stepfun-context-compaction` → `context-compaction`
@@ -20,7 +20,7 @@
 
 ## [1.0.0] - 2026-09-27
 
-### Added
+### 新增
 
 - 初版：SKILL.md（5 步压缩流程 + 快照模板 + 触发条件）
 - StepFun 模型上下文窗口阈值表（step-2-16k 至 Step 3.7 Flash，2026-09 核实）

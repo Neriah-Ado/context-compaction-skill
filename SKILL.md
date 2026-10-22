@@ -7,7 +7,7 @@ license: AGPL-3.0-only
 
 # 通用 Agent 上下文自动压缩（Context Compaction）
 
-本技能适用于**任意编码 Agent 与任意模型**（ZCode、Claude Code、Codex、Step Code 等），在长会话中对上下文做**结构化压缩**：产出一份可续接的快照文件 + 一份机械压缩的对话素材，让新会话能无损恢复工作现场。
+本技能适用于**任意编码 Agent 与任意模型**（ZCode、Claude Code、Codex、Step Code 等），在长会话中对上下文做**结构化压缩**：产出一份可续接的上下文快照 + 一份机械压缩的对话素材，让新会话能无损恢复工作现场。
 
 ## 1. 触发时机（满足任一即执行本技能）
 
@@ -85,6 +85,7 @@ python scripts/compress_session.py <会话记录文件> --out .agent/snapshot-ma
 
 ## 6. 注意事项
 
+- **frontmatter 约定**：`description` 用英文（供模型检索与跨 Agent 加载器识别触发意图），`when_to_use` 与正文用中文；改技能名时同步 frontmatter 的 `name`。
 - 各模型窗口与推荐触发阈值**必须**先查 `references/model-context-limits.md`；未列出的模型按保守规则估算，不要凭记忆假设。
 - 机械压缩脚本只做降噪，**语义压缩（快照）永远由模型完成**，二者不可互相替代。
 - 压缩操作本身要省 token：不回读完整历史，优先用脚本产物；快照写入失败时退化为直接在回复中输出快照内容让用户保存。
